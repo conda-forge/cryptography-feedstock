@@ -75,6 +75,7 @@ about:
   doc_url: https://cryptography.io
   doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
   dev_url: https://github.com/pyca/cryptography
+  doc_source_url: https://github.com/pyca/cryptography/tree/master/docs
 
 extra:
   recipe-maintainers:
