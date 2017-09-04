@@ -1,5 +1,5 @@
 {% set name = "cryptography" %}
-{% set version = "1.9" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5518337022718029e367d982642f3e3523541e098ad671672a90b82474c84882
+  sha256: d04bb2425086c3fe86f7bc48915290b13e798497839fbb18ab7f6dffcf98cc3a
 
 build:
   number: 0
@@ -40,6 +40,7 @@ requirements:
 test:
   imports:
     - cryptography
+    - cryptography.fernet
     - cryptography.hazmat
     - cryptography.hazmat.backends
     - cryptography.hazmat.backends.openssl
@@ -57,7 +58,7 @@ test:
     - hypothesis >=1.11.4
     - iso8601
     - pretend
-    - pytest >=2.9.0
+    - pytest >=2.9.0,!=3.2.0
     - pytz
   source_files:
     - tests
@@ -68,7 +69,13 @@ about:
   home: https://github.com/pyca/cryptography
   license: Apache 2.0 or BSD 3-Clause, PSF 2
   license_file: LICENSE
-  summary: cryptography is a package which provides cryptographic recipes and primitives to Python developers.
+  summary: Provides cryptographic recipes and primitives to Python developers
+  description: |
+    Cryptography is a Python library which exposes cryptographic recipes and
+    primitives. The goal is for it to be your "cryptographic standard library".
+  doc_url: https://cryptography.io
+  doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
+  dev_url: https://github.com/pyca/cryptography
 
 extra:
   recipe-maintainers:
