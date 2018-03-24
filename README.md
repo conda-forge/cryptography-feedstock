@@ -7,8 +7,10 @@ Package license: Apache 2.0 or BSD 3-Clause, PSF 2
 
 Feedstock license: BSD 3-Clause
 
-Summary: cryptography is a package which provides cryptographic recipes and primitives to Python developers.
+Summary: Provides cryptographic recipes and primitives to Python developers
 
+Cryptography is a Python library which exposes cryptographic recipes and
+primitives. The goal is for it to be your "cryptographic standard library".
 
 
 Current build status
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
