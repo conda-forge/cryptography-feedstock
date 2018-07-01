@@ -11,7 +11,7 @@ source:
   sha256: dddad9d322a3f0867009ff9f25477b8f7c0bdbedf143704b384c9472f11cb2d3
 
 build:
-  number: 0
+  number: 1
   script:
     - export CFLAGS="-I${PREFIX}/include ${CFLAGS}"  # [unix]
     - export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"  # [unix]
@@ -21,15 +21,16 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools >=11.3
-    - openssl 1.0.*
+    - openssl
     - cffi >=1.7
 
   run:
     - python
-    - openssl 1.0.*
+    - openssl
     - cffi >=1.7
     - enum34  # [py2k]
     - ipaddress  # [py2k]
