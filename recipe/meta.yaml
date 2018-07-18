@@ -1,5 +1,5 @@
 {% set name = "cryptography" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dddad9d322a3f0867009ff9f25477b8f7c0bdbedf143704b384c9472f11cb2d3
+  sha256: c132bab45d4bd0fff1d3fe294d92b0a6eb8404e93337b3127bdec9f21de117e6
 
 build:
-  number: 1
+  number: 0
   script:
     - export CFLAGS="-I${PREFIX}/include ${CFLAGS}"  # [unix]
     - export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"  # [unix]
