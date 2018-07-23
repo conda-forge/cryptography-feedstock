@@ -1,13 +1,11 @@
-{% set name = "cryptography" %}
 {% set version = "2.3" %}
 
 package:
-  name: {{ name|lower }}
+  name: cryptography
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
   sha256: c132bab45d4bd0fff1d3fe294d92b0a6eb8404e93337b3127bdec9f21de117e6
 
 build:
@@ -17,17 +15,17 @@ build:
     - export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"  # [unix]
     # needed to link to openssl 1.0.*
     - set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=1  # [win]
-    - python setup.py install --single-version-externally-managed --record=record.txt
+    - python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools >=11.3
+    - pip
     - openssl
     - cffi >=1.7
-
+    - cryptography-vectors {{ version }}
   run:
     - python
     - openssl
@@ -37,6 +35,7 @@ requirements:
     - asn1crypto >=0.21.0
     - six >=1.4.1
     - idna >=2.1
+    - cryptography-vectors {{ version }}
 
 test:
   imports:
@@ -82,3 +81,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - jschueller
+    - ocefpaf
