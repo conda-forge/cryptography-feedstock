@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.4.1" %}
 
 package:
   name: cryptography
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: 8d10113ca826a4c29d5b85b2c4e045ffa8bad74fb525ee0eceb1d38d4c70dfd6
+  sha256: e85b410885addaeb31a867eabcefc9ef4a7e904ad45eac9e60a763a54b244626
   patches:
     - 0001-Skip-macOS-test-for-getentropy.patch
 
