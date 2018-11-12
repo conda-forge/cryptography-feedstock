@@ -1,7 +1,6 @@
-diff -urN cryptography-2.3.1.orig/tests/hazmat/backends/test_openssl.py cryptography-2.3.1/tests/hazmat/backends/test_openssl.py
---- cryptography-2.3.1.orig/tests/hazmat/backends/test_openssl.py	2018-08-28 10:56:38.000000000 +0100
-+++ cryptography-2.3.1/tests/hazmat/backends/test_openssl.py	2018-08-28 10:57:49.000000000 +0100
-@@ -271,12 +271,14 @@
+--- cryptography-2.4.1.orig/tests/hazmat/backends/test_openssl.py	2018-11-11 22:52:23.000000000 -0200
++++ cryptography-2.4.1/tests/hazmat/backends/test_openssl.py	2018-11-12 12:08:52.668226551 -0200
+@@ -271,12 +271,13 @@
                          'getrandom']
          if sys.platform.startswith('linux'):
              assert name in ['getrandom', '/dev/urandom']
@@ -11,14 +10,13 @@ diff -urN cryptography-2.3.1.orig/tests/hazmat/backends/test_openssl.py cryptogr
 -                assert name == 'getentropy'
 -            else:
 -                assert name == '/dev/urandom'
-+# This has been causing our tests to fail for ages:
-+# https://github.com/pyca/cryptography/issues/4110
-+#        if sys.platform == 'darwin':
-+#            # macOS 10.12+ supports getentropy
-+#            if parse_version(os.uname()[2]) >= parse_version("16.0"):
-+#                assert name == 'getentropy'
-+#            else:
-+#                assert name == '/dev/urandom'
-         if 'bsd' in sys.platform:
-             assert name in ['getentropy', '/dev/urandom']
++        # See https://github.com/pyca/cryptography/issues/4110
++        # if sys.platform == 'darwin':
++        #     # macOS 10.12+ supports getentropy
++        #     if parse_version(os.uname()[2]) >= parse_version("16.0"):
++        #         assert name == 'getentropy'
++        #     else:
++        #         assert name == '/dev/urandom'
          if sys.platform == 'win32':
+             assert name == 'CryptGenRandom'
+ 
