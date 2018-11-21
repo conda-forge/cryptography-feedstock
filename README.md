@@ -20,7 +20,8 @@ message digests and key derivation functions.
 Current build status
 ====================
 
-[![Linux,OSX](https://img.shields.io/circleci/project/github/conda-forge/cryptography-feedstock/master.svg?label=Linux,OSX)](https://circleci.com/gh/conda-forge/cryptography-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cryptography-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cryptography-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/cryptography-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cryptography-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/cryptography-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/cryptography-feedstock/branch/master)
 
 Current release info
