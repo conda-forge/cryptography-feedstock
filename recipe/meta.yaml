@@ -13,7 +13,6 @@ source:
 build:
   number: 0
   script:
-  script:
     # needed to link to openssl 1.0.*
     - set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=1  # [win and py==27]
     - set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=0  # [win and py!=27]
