@@ -13,10 +13,8 @@ source:
 build:
   number: 3
   script:
-    # needed to link to openssl 1.0.*
-    # - set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=1  # [win and py==27]
-    # - set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=0  # [win and py!=27]
-    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+    - if "%openssl%" == "1.0.2" set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=1   # [win]
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vv"
 
 requirements:
   build:
