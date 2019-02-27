@@ -1,4 +1,4 @@
-{% set version = "2.5" %}
+{% set version = "2.6" %}
 
 package:
   name: cryptography
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: 4946b67235b9d2ea7d31307be9d5ad5959d6c4a8f98f900157b47abddf698401
+  sha256: 41d3d15be7f297275e8b476cbd132c9d6701c5206e6c48c5946ec40ff2abb1bc
   patches:
     - 0001-Skip-macOS-test-for-getentropy.patch
 
 build:
-  number: 1
+  number: 0
   script:
     # needed to link to openssl 1.0.*
     - set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=1  # [win and py==27]
