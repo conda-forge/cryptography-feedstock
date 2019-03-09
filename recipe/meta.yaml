@@ -15,7 +15,7 @@ build:
   script:
     # needed to link to openssl 1.0.*
     - if "%openssl%" == "1.0.2" set CRYPTOGRAPHY_WINDOWS_LINK_LEGACY_OPENSSL=1   # [win]
-    - python -m pip install --no-deps --ignore-installed . -vv
+    - python -m pip install --no-deps --ignore-installed --no-use-pep517 . -vv
 
 requirements:
   build:
