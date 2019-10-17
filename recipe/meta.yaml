@@ -1,4 +1,4 @@
-{% set version = "2.7" %}
+{% set version = "2.8" %}
 
 package:
   name: cryptography
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: e6347742ac8f35ded4a46ff835c60e68c22a536a8ae5c4422966d06946b6d4c6
+  sha256: 3cda1f0ed8747339bbdf71b9f38ca74c7b592f24f65cdb3ab3765e4b02871651
 
 build:
   number: 0
