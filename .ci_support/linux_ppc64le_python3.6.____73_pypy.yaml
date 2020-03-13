@@ -1,21 +1,15 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
-cdt_arch:
-- aarch64
-cdt_name:
-- cos7
+- '8'
 channel_sources:
-- conda-forge,c4aarch64,defaults
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 docker_image:
-- condaforge/linux-anvil-aarch64
+- condaforge/linux-anvil-ppc64le
 openssl:
-- 1.1.1a
+- 1.1.1
 pin_run_as_build:
   openssl:
     max_pin: x.x.x
@@ -23,4 +17,4 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.7'
+- 3.6.* *_73_pypy
