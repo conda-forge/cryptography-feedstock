@@ -19,11 +19,11 @@ requirements:
     - python
     - pip
     - openssl
-    - cffi >=1.8,!=1.11.3
+    - cffi >=1.8,!=1.11.3   # [not python.endswith("pypy")]
   run:
     - python
     - openssl
-    - cffi >=1.8,!=1.11.3
+    - cffi >=1.8,!=1.11.3   # [not python.endswith("pypy")]
     - enum34  # [py2k]
     - ipaddress  # [py2k]
     - six >=1.4.1
