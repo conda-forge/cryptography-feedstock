@@ -9,7 +9,7 @@ source:
   sha256: 3cda1f0ed8747339bbdf71b9f38ca74c7b592f24f65cdb3ab3765e4b02871651
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -19,11 +19,11 @@ requirements:
     - python
     - pip
     - openssl
-    - cffi >=1.8,!=1.11.3
+    - cffi >=1.8,!=1.11.3   # [python_impl != "pypy"]
   run:
     - python
     - openssl
-    - cffi >=1.8,!=1.11.3
+    - cffi >=1.8,!=1.11.3   # [python_impl != "pypy"]
     - enum34  # [py2k]
     - ipaddress  # [py2k]
     - six >=1.4.1
