@@ -35,9 +35,9 @@ test:
     - cryptography.fernet
     - cryptography.hazmat
     - cryptography.hazmat.backends
-    - cryptography.hazmat.backends.openssl  # [not win]
+    - cryptography.hazmat.backends.openssl
     - cryptography.hazmat.bindings
-    - cryptography.hazmat.bindings.openssl  # [not win]
+    - cryptography.hazmat.bindings.openssl
     - cryptography.hazmat.primitives
     - cryptography.hazmat.primitives.asymmetric
     - cryptography.hazmat.primitives.ciphers
