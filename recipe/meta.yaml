@@ -54,6 +54,7 @@ test:
   source_files:
     - tests
   commands:
+    # run_test.py will check that the correct openssl version is linked
     - pytest
 
 about:
