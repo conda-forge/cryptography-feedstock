@@ -7,8 +7,8 @@ linked_version = backend.openssl_version_text()
 # the version present in the conda environment
 env_version = subprocess.check_output('openssl version', shell=True).decode('utf8').strip()
 
-print(f'Version used by cryptography:\n{linked_version}')
-print(f'Version in conda environment:\n{env_version}')
+print('Version used by cryptography:\n{linked_version}'.format(linked_version=linked_version))
+print('Version in conda environment:\n{env_version}'.format(env_version=env_version))
 
 # avoid race condition between print and (possible) AssertionError
 time.sleep(1)
