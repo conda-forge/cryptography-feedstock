@@ -1,4 +1,4 @@
-{% set version = "2.8" %}
+{% set version = "2.9.2" %}
 
 package:
   name: cryptography
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: 3cda1f0ed8747339bbdf71b9f38ca74c7b592f24f65cdb3ab3765e4b02871651
+  sha256: a0c30272fb4ddda5f5ffc1089d7405b7a71b0b0f51993cb4e5dbb4590b2fc229
 
 build:
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -19,15 +19,15 @@ requirements:
     - python
     - pip
     - openssl
-    - cffi >=1.8,!=1.11.3   # [python_impl != "pypy"]
+    - cffi                  # [python_impl != "pypy"]
   run:
     - python
     - openssl
-    - cffi >=1.8,!=1.11.3   # [python_impl != "pypy"]
-    - enum34  # [py2k]
-    - ipaddress  # [py2k]
-    - six >=1.4.1
-    - idna >=2.1
+    - cffi                  # [python_impl != "pypy"]
+    - enum34                # [py2k]
+    - ipaddress             # [py2k]
+    - six
+    - idna
 
 test:
   imports:
@@ -35,9 +35,9 @@ test:
     - cryptography.fernet
     - cryptography.hazmat
     - cryptography.hazmat.backends
-    - cryptography.hazmat.backends.openssl  # [not win]
+    - cryptography.hazmat.backends.openssl
     - cryptography.hazmat.bindings
-    - cryptography.hazmat.bindings.openssl  # [not win]
+    - cryptography.hazmat.bindings.openssl
     - cryptography.hazmat.primitives
     - cryptography.hazmat.primitives.asymmetric
     - cryptography.hazmat.primitives.ciphers
@@ -45,20 +45,21 @@ test:
     - cryptography.hazmat.primitives.twofactor
     - cryptography.x509
   requires:
-    - cryptography-vectors {{ version }}.*
-    - hypothesis >=1.11.4,!=3.79.2
+    - cryptography-vectors {{ version }}
+    - hypothesis
     - iso8601
     - pretend
-    - pytest >=3.6.0,!=3.9.0,!=3.9.1,!=3.9.2
+    - pytest
     - pytz
   source_files:
     - tests
   commands:
+    # run_test.py will check that the correct openssl version is linked
     - pytest
 
 about:
   home: https://github.com/pyca/cryptography
-  license: Apache 2.0 or BSD 3-Clause, PSF 2
+  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0
   license_family: BSD
   license_file: LICENSE
   summary: Provides cryptographic recipes and primitives to Python developers
@@ -72,7 +73,6 @@ about:
   doc_url: http://cryptography.readthedocs.io/
   doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
   dev_url: https://github.com/pyca/cryptography
-  doc_source_url: https://github.com/pyca/cryptography/tree/master/docs
 
 extra:
   recipe-maintainers:
