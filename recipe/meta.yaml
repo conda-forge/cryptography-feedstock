@@ -22,15 +22,14 @@ requirements:
     - python
     - pip
     - openssl
-    - cffi                  # [python_impl != "pypy"]
+    - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
   run:
     - python
     - openssl
-    - cffi                  # [python_impl != "pypy"]
+    - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
     - enum34                # [py2k]
     - ipaddress             # [py2k]
-    - six
-    - idna
+    - six >=1.4.1
 
 test:
   imports:
