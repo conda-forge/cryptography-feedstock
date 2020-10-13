@@ -5,9 +5,13 @@ Home: https://github.com/pyca/cryptography
 
 Package license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cryptography-feedstock/blob/master/LICENSE.txt)
 
 Summary: Provides cryptographic recipes and primitives to Python developers
+
+Development: https://github.com/pyca/cryptography
+
+Documentation: http://cryptography.readthedocs.io/
 
 Cryptography is a package which provides cryptographic recipes and
 primitives to Python developers. Our goal is for it to be your
@@ -77,6 +81,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_python3.9.____cpythonpython_implcpythontarget_platformlinux-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.9.____cpythonpython_implcpythontarget_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_aarch64_python3.6.____73_pypypython_implpypytarget_platformlinux-aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
@@ -102,6 +113,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.8.____cpythonpython_implcpythontarget_platformlinux-aarch64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_python3.9.____cpythonpython_implcpythontarget_platformlinux-aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.9.____cpythonpython_implcpythontarget_platformlinux-aarch64" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -133,6 +151,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_ppc64le_python3.9.____cpythonpython_implcpythontarget_platformlinux-ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_python3.9.____cpythonpython_implcpythontarget_platformlinux-ppc64le" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_python3.6.____73_pypypython_implpypytarget_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
@@ -161,10 +186,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_target_platformosx-arm64</td>
+              <td>osx_64_python3.9.____cpythonpython_implcpythontarget_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_target_platformosx-arm64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.9.____cpythonpython_implcpythontarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_python3.8.____cpythontarget_platformosx-arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_python3.8.____cpythontarget_platformosx-arm64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_python3.9.____cpythontarget_platformosx-arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_python3.9.____cpythontarget_platformosx-arm64" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -186,6 +225,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=win&configuration=win_64_python3.8.____cpythontarget_platformwin-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.9.____cpythontarget_platformwin-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=master&jobName=win&configuration=win_64_python3.9.____cpythontarget_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr>
