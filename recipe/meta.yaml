@@ -22,7 +22,7 @@ requirements:
   host:
     - python
     - pip
-    - setuptools_rust
+    - setuptools-rust
     - openssl
     - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
   run:
