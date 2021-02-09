@@ -22,6 +22,8 @@ python:
 - 3.9.* *_cpython
 python_impl:
 - cpython
+rust_compiler:
+- rust
 target_platform:
 - linux-64
 zip_keys:
