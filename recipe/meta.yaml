@@ -18,9 +18,11 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [python_impl != "pypy" and build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ compiler('rust') }}
   host:
     - python
     - pip
+    - setuptools-rust
     - openssl
     - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
   run:
