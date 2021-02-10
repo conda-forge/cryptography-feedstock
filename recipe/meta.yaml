@@ -57,6 +57,7 @@ test:
     - iso8601
     - pretend
     - pytest
+    - pytest-subtests
     - pytz
   source_files:
     - tests
