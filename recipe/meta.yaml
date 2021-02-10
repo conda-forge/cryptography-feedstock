@@ -10,7 +10,10 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - export CRYPTOGRAPHY_DONT_BUILD_RUST=1  # [not win]
+    - set CRYPTOGRAPHY_DONT_BUILD_RUST=1  # [win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
