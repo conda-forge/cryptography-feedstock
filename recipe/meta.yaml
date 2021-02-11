@@ -9,32 +9,30 @@ source:
   sha256: ee5e19f0856b6fbbdbab15c2787ca65d203801d2d65d0b8de6218f424206c848
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [py<36]
   script:
-    - export CRYPTOGRAPHY_DONT_BUILD_RUST=1  # [not win]
-    - set CRYPTOGRAPHY_DONT_BUILD_RUST=1  # [win]
+    - export CRYPTOGRAPHY_DONT_BUILD_RUST=0  # [not win]
+    - set CRYPTOGRAPHY_DONT_BUILD_RUST=0  # [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cffi                                   # [python_impl != "pypy" and build_platform != target_platform]
+    - cffi >=1.12                            # [python_impl != "pypy" and build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
   host:
     - python
     - pip
-    - setuptools-rust
+    - setuptools-rust >=0.11.4
     - openssl
-    - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
+    - cffi  >=1.12   # [python_impl != "pypy"]
   run:
     - python
     - openssl
-    - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
-    - enum34                # [py2k]
-    - ipaddress             # [py2k]
-    - six >=1.4.1
+    - cffi >=1.12   # [python_impl != "pypy"]
 
 test:
   imports:
