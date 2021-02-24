@@ -65,7 +65,7 @@ test:
 
 about:
   home: https://github.com/pyca/cryptography
-  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0
+  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
   license_family: BSD
   license_file: LICENSE
   summary: Provides cryptographic recipes and primitives to Python developers
