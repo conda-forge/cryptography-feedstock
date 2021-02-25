@@ -14,7 +14,7 @@ build:
   script:
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include    # [build_platform != target_platform]
     - export PYO3_CROSS_LIB_DIR=$PREFIX/lib            # [build_platform != target_platform]
-    - export PYO3_PYTHON_VERSION=$python               # [build_platform != target_platform]
+    - export PYO3_CROSS_PYTHON_VERSION=$python               # [build_platform != target_platform]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
