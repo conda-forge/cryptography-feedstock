@@ -13,9 +13,9 @@ build:
   skip: True  # [py<36]
   script:
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include    # [build_platform != target_platform]
-    - export PYO3_CROSS_LIB_DIR=$PREFIX/lib            # [build_platform != target_platform]
+    - export PYO3_CROSS_LIB_DIR=$SP_DIR/../            # [build_platform != target_platform]
     - export PYO3_CROSS_PYTHON_VERSION=$python         # [build_platform != target_platform]
-    - find $SP_DIR/../ -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py" -type f -exec rm -f {} +  # [build_platform != target_platform]
+    - find $PYO3_CROSS_LIB_DIR -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME}.py" -type f -exec rm -f {} +  # [build_platform != target_platform]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
