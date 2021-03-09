@@ -1,4 +1,4 @@
-{% set version = "3.4.4" %}
+{% set version = "3.4.5" %}
 
 package:
   name: cryptography
@@ -6,35 +6,37 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: ee5e19f0856b6fbbdbab15c2787ca65d203801d2d65d0b8de6218f424206c848
+  sha256: 4f6761a82b51fe02cda8f45af1c2f698a10f50003dc9c2572d8a49eda2e6d35b
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [py<36]
   script:
-    - export CRYPTOGRAPHY_DONT_BUILD_RUST=1  # [not win]
-    - set CRYPTOGRAPHY_DONT_BUILD_RUST=1  # [win]
+    - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include    # [build_platform != target_platform]
+    - export PYO3_CROSS_LIB_DIR=$SP_DIR/../            # [build_platform != target_platform]
+    - export PYO3_CROSS_PYTHON_VERSION=$python         # [build_platform != target_platform]
+    - ls $PYO3_CROSS_LIB_DIR         # [build_platform != target_platform]
+    - find $PYO3_CROSS_LIB_DIR -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +  # [build_platform != target_platform]
+    - ls $PYO3_CROSS_LIB_DIR         # [build_platform != target_platform]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cffi                                   # [python_impl != "pypy" and build_platform != target_platform]
-    - {{ compiler('c') }}
+    - cffi >=1.12                            # [python_impl != "pypy" and build_platform != target_platform]
     - {{ compiler('rust') }}
   host:
     - python
+    - setuptools >=40.6.0
     - pip
-    - setuptools-rust
+    - setuptools-rust >=0.11.4
     - openssl
-    - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
+    - cffi  >=1.12   # [python_impl != "pypy"]
   run:
     - python
     - openssl
-    - cffi !=1.11.3,>=1.8   # [python_impl != "pypy"]
-    - enum34                # [py2k]
-    - ipaddress             # [py2k]
-    - six >=1.4.1
+    - cffi >=1.12   # [python_impl != "pypy"]
 
 test:
   imports:
@@ -67,7 +69,7 @@ test:
 
 about:
   home: https://github.com/pyca/cryptography
-  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0
+  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
   license_family: BSD
   license_file: LICENSE
   summary: Provides cryptographic recipes and primitives to Python developers

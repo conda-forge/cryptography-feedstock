@@ -1,9 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
-c_compiler:
-- clang
-c_compiler_version:
-- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -24,6 +20,8 @@ python_impl:
 - pypy
 rust_compiler:
 - rust
+rust_compiler_version:
+- '1.46'
 target_platform:
 - osx-64
 zip_keys:
