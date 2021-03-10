@@ -1,4 +1,4 @@
-{% set version = "3.4.5" %}
+{% set version = "3.4.6" %}
 
 package:
   name: cryptography
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: 4f6761a82b51fe02cda8f45af1c2f698a10f50003dc9c2572d8a49eda2e6d35b
+  sha256: 2d32223e5b0ee02943f32b19245b61a62db83a882f0e76cc564e1cec60d48f87
 
 build:
-  number: 1
-  skip: True  # [py<36]
+  number: 0
+  skip: true  # [py<36]
   script:
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include    # [build_platform != target_platform]
     - export PYO3_CROSS_LIB_DIR=$SP_DIR/../            # [build_platform != target_platform]
