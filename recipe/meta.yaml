@@ -15,7 +15,7 @@ build:
     {% if build_platform != target_platform %}
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
     - export PYO3_CROSS_LIB_DIR=$SP_DIR/../
-    - export PYO3_CROSS_PYTHON_VERSION=$python
+    - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
     - ls $PYO3_CROSS_LIB_DIR
     - find $PYO3_CROSS_LIB_DIR -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
     - ls $PYO3_CROSS_LIB_DIR
