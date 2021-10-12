@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 macos_machine:
@@ -9,8 +9,6 @@ macos_machine:
 openssl:
 - 1.1.1
 pin_run_as_build:
-  openssl:
-    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
@@ -20,8 +18,6 @@ python_impl:
 - pypy
 rust_compiler:
 - rust
-rust_compiler_version:
-- '1.46'
 target_platform:
 - osx-64
 zip_keys:
