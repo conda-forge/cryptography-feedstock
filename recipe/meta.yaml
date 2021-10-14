@@ -63,6 +63,8 @@ test:
     - pytest
     - pytest-subtests
     - pytz
+    # debug:
+    - python =3.7.10=*_103_cpython  # [py==37 and python_impl == "cpython" and linux]
   source_files:
     - tests
   commands:
