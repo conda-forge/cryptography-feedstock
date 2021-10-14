@@ -1,24 +1,24 @@
 About cryptography
 ==================
 
-Home: https://github.com/pyca/cryptography
+Home: cryptography.io
 
 Package license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cryptography-feedstock/blob/master/LICENSE.txt)
 
-Summary: Provides cryptographic recipes and primitives to Python developers
+Summary: cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
 
 Development: https://github.com/pyca/cryptography
 
 Documentation: http://cryptography.readthedocs.io/
 
-Cryptography is a package which provides cryptographic recipes and
+cryptography is a package which provides cryptographic recipes and
 primitives to Python developers. Our goal is for it to be your
-"cryptographic standard library". It supports Python 2.6-2.7, Python 3.3+,
-and PyPy 2.6+. Cryptography includes both high level recipes, and low level
-interfaces to common cryptographic algorithms such as symmetric ciphers,
-message digests and key derivation functions.
+"cryptographic standard library". It supports Python 3.6+ and PyPy3 7.2+.
+cryptography includes both high level recipes and low level interfaces
+to common cryptographic algorithms such as symmetric ciphers, message
+digests, and key derivation functions..
 
 
 Current build status
