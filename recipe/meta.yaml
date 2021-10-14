@@ -1,4 +1,4 @@
-{% set version = "3.4.8" %}
+{% set version = "35.0.0" %}
 
 package:
   name: cryptography
@@ -6,18 +6,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: 94cc5ed4ceaefcbe5bf38c8fba6a21fc1d365bb8fb826ea1688e3370b2e24a1c
+  sha256: 9933f28f70d0517686bd7de36166dda42094eac49415459d9bdf5e7df3e0086d
 
 build:
   number: 0
   skip: true  # [py<36]
   script:
-    - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include    # [build_platform != target_platform]
-    - export PYO3_CROSS_LIB_DIR=$SP_DIR/../            # [build_platform != target_platform]
-    - export PYO3_CROSS_PYTHON_VERSION=$python         # [build_platform != target_platform]
-    - ls $PYO3_CROSS_LIB_DIR         # [build_platform != target_platform]
-    - find $PYO3_CROSS_LIB_DIR -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +  # [build_platform != target_platform]
-    - ls $PYO3_CROSS_LIB_DIR         # [build_platform != target_platform]
+    {% if build_platform != target_platform %}
+    - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
+    - export PYO3_CROSS_LIB_DIR=$SP_DIR/../
+    - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
+    - ls $PYO3_CROSS_LIB_DIR
+    - find $PYO3_CROSS_LIB_DIR -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
+    - ls $PYO3_CROSS_LIB_DIR
+    {% endif %}
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -32,7 +34,7 @@ requirements:
     - pip
     - setuptools-rust >=0.11.4
     - openssl
-    - cffi  >=1.12   # [python_impl != "pypy"]
+    - cffi >=1.12   # [python_impl != "pypy"]
   run:
     - python
     - openssl
@@ -88,3 +90,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - ocefpaf
+    - h-vetinari
