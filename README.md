@@ -1,7 +1,7 @@
 About cryptography
 ==================
 
-Home: cryptography.io
+Home: https://cryptography.io
 
 Package license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
 
@@ -11,7 +11,7 @@ Summary: cryptography is a package designed to expose cryptographic primitives a
 
 Development: https://github.com/pyca/cryptography
 
-Documentation: http://cryptography.readthedocs.io/
+Documentation: https://cryptography.io/en/latest
 
 cryptography is a package which provides cryptographic recipes and
 primitives to Python developers. Our goal is for it to be your

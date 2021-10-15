@@ -74,7 +74,7 @@ test:
     - pytest
 
 about:
-  home: cryptography.io
+  home: https://cryptography.io
   license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
   license_family: BSD
   license_file: LICENSE
@@ -86,7 +86,7 @@ about:
     cryptography includes both high level recipes and low level interfaces
     to common cryptographic algorithms such as symmetric ciphers, message
     digests, and key derivation functions..
-  doc_url: http://cryptography.readthedocs.io/
+  doc_url: https://cryptography.io/en/latest
   doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
   dev_url: https://github.com/pyca/cryptography
 
