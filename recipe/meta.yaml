@@ -9,7 +9,7 @@ source:
   sha256: 9933f28f70d0517686bd7de36166dda42094eac49415459d9bdf5e7df3e0086d
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<36]
   script:
     {% if build_platform != target_platform %}
