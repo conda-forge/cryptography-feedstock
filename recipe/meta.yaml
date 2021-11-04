@@ -7,18 +7,18 @@ package:
 source:
   url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
   sha256: 9933f28f70d0517686bd7de36166dda42094eac49415459d9bdf5e7df3e0086d
+  patches:
+    # Update pyo3 to avoid https://github.com/PyO3/pyo3/pull/1847#discussion_r727122252
+    - patches/0001-Use-pyo3-0.15.0-to-fix-cross-compilation.patch  # [build_platform != target_platform]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<36]
   script:
     {% if build_platform != target_platform %}
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
     - export PYO3_CROSS_LIB_DIR=$SP_DIR/../
     - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
-    - ls $PYO3_CROSS_LIB_DIR
-    - find $PYO3_CROSS_LIB_DIR -name "_sysconfigdata*.py" -not -name "${_CONDA_PYTHON_SYSCONFIGDATA_NAME_BACKUP}.py" -type f -exec rm -f {} +
-    - ls $PYO3_CROSS_LIB_DIR
     {% endif %}
     - {{ PYTHON }} -m pip install . -vv
 
