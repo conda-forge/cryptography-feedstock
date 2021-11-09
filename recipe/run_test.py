@@ -1,3 +1,4 @@
+import re
 import subprocess
 import time
 from cryptography.hazmat.backends.openssl import backend
@@ -6,6 +7,9 @@ from cryptography.hazmat.backends.openssl import backend
 linked_version = backend.openssl_version_text()
 # the version present in the conda environment
 env_version = subprocess.check_output('openssl version', shell=True).decode('utf8').strip()
+# strip off possible brackets from e.g. "OpenSSL 3.0.0 7 sep 2021 (Library: OpenSSL 3.0.0 7 sep 2021)"
+env_version = re.sub(r"(?P<version>OpenSSL [\d\.]+ \d+ [a-z]{3} 20\d\d)(?P<irrelevant> \(.*\))?",
+                     r"\1", env_version)
 
 print('Version used by cryptography:\n{linked_version}'.format(linked_version=linked_version))
 print('Version in conda environment:\n{env_version}'.format(env_version=env_version))
