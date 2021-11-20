@@ -1,4 +1,4 @@
-{% set version = "35.0.0" %}
+{% set version = "3.4.8" %}
 
 package:
   name: cryptography
@@ -12,7 +12,9 @@ source:
     - patches/0001-Use-pyo3-0.15.0-to-fix-cross-compilation.patch  # [build_platform != target_platform]
 
 build:
-  number: 2
+  number: 1
+  # TEMPORARY: skip everything so that new branch can be pushed
+  skip: true
   skip: true  # [py<36]
   script:
     {% if build_platform != target_platform %}
