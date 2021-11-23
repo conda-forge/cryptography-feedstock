@@ -11,15 +11,15 @@ diff --git a/src/rust/Cargo.toml b/src/rust/Cargo.toml
 index 6d59072..29c7e29 100644
 --- a/src/rust/Cargo.toml
 +++ b/src/rust/Cargo.toml
-@@ -7,7 +7,7 @@ publish = false
+@@ -6,7 +6,7 @@ edition = "2018"
+ publish = false
  
  [dependencies]
- lazy_static = "1"
--pyo3 = { version = "0.14.5" }
-+pyo3 = { version = "0.15.0" }
- asn1 = { version = "0.6", default-features = false, features = ["derive"] }
- pem = "0.8"
- chrono = { version = "0.4", default-features = false, features = ["alloc"] }
+-pyo3 = { version = "0.13.1", features = ["extension-module"] }
++pyo3 = { version = "0.15.0", features = ["extension-module"] }
+ 
+ [lib]
+ name = "cryptography_rust"
 -- 
-2.30.1 (Apple Git-130)
+2.28.0
 
