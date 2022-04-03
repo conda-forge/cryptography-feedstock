@@ -9,7 +9,10 @@ source:
   sha256: 1326924f5ff5073b2621e57891d195be7220ce34a34dafec3c1053e970d24975
   patches:
     # backport pyca/cryptography#6935 for pypy3.9 support
-    - patches/0001-Upgrade-to-pyo3-0.16.patch  # [python_impl == "pypy" and python == "3.9.* *_73_pypy"]
+    {% if python_impl == "pypy" and python == "3.9.* *_73_pypy" %}
+    - patches/0001-Upgrade-to-pyo3-0.16.patch
+    - patches/0002-pick-up-all-other-outstanding-changes-to-Cargo.lock.patch
+    {% endif %}
 
 build:
   number: 1

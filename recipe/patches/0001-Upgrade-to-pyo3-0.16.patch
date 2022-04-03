@@ -1,7 +1,7 @@
 From 30f878d57fb82a26c803f3e8b00fa880e76bdd05 Mon Sep 17 00:00:00 2001
 From: Alex Gaynor <alex.gaynor@gmail.com>
 Date: Sat, 5 Mar 2022 10:28:47 -0500
-Subject: [PATCH] Upgrade to pyo3 0.16
+Subject: [PATCH 1/2] Upgrade to pyo3 0.16
 
 Rebased-by: H. Vetinari <h.vetinari@gmx.com>
 ---
