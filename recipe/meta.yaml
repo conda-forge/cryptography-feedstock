@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cryptography/cryptography-{{ version }}.tar.gz
-  sha256: 70f8f4f7bb2ac9f340655cbac89d68c527af5bb4387522a8413e841e3e6628c9
+  url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 1326924f5ff5073b2621e57891d195be7220ce34a34dafec3c1053e970d24975
   patches:
     # backport pyca/cryptography#6935 for pypy3.9 support
     - patches/0001-Upgrade-to-pyo3-0.16.patch  # [python_impl == "pypy" and python == "3.9.* *_73_pypy"]
