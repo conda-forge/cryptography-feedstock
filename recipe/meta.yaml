@@ -76,7 +76,7 @@ test:
     - tests
   commands:
     # run_test.py will check that the correct openssl version is linked
-    - pytest -k not "({{ tests_to_skip }})"
+    - pytest -k "not ({{ tests_to_skip }})"
 
 about:
   home: https://cryptography.io
