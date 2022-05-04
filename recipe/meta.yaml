@@ -1,4 +1,4 @@
-{% set version = "36.0.2" %}
+{% set version = "37.0.2" %}
 
 package:
   name: cryptography
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 1326924f5ff5073b2621e57891d195be7220ce34a34dafec3c1053e970d24975
+  sha256: 9fc6a3b4d86e5d41c4d101ff9413a8576bbf85d483464ee73880ce58dd41c9c9
   patches:
     # backport pyca/cryptography#6935 for pypy3.9 support
     {% if python_impl == "pypy" and python == "3.9.* *_73_pypy" %}
@@ -15,7 +15,7 @@ source:
     {% endif %}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36]
   script:
     {% if build_platform != target_platform %}
