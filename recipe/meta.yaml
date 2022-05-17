@@ -66,6 +66,7 @@ test:
     - pretend
     - pytest
     - pytest-subtests
+    - pytest-benchmark
     - pytz
   source_files:
     - tests
