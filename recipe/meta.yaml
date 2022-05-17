@@ -41,7 +41,6 @@ requirements:
     - cffi >=1.12   # [python_impl != "pypy"]
   run:
     - python
-    - openssl
     - cffi >=1.12   # [python_impl != "pypy"]
 
 test:
