@@ -7,12 +7,6 @@ package:
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
   sha256: 9fc6a3b4d86e5d41c4d101ff9413a8576bbf85d483464ee73880ce58dd41c9c9
-  patches:
-    # backport pyca/cryptography#6935 for pypy3.9 support
-    {% if python_impl == "pypy" and python == "3.9.* *_73_pypy" %}
-    - patches/0001-Upgrade-to-pyo3-0.16.patch
-    - patches/0002-pick-up-all-other-outstanding-changes-to-Cargo.lock.patch
-    {% endif %}
 
 build:
   number: 0
