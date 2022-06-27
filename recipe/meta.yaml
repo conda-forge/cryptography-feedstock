@@ -16,8 +16,10 @@ build:
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
     - export PYO3_CROSS_LIB_DIR=$SP_DIR/../
     - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
-    # see pyca/cryptography#6485 & https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=998232
+    # see pyca/cryptography#6485 & rust-lang/cargo#10230
     - export CARGO_NET_GIT_FETCH_WITH_CLI=true
+    # more debug
+    - export CARGO_LOG=trace
     {% endif %}
     - {{ PYTHON }} -m pip install . -vv
 
