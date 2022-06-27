@@ -32,8 +32,6 @@ requirements:
     - git                                    # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
-    # debug
-    - rust =1.60
   host:
     - python
     - setuptools <62.4
