@@ -63,6 +63,8 @@ test:
     - pytz
   source_files:
     - tests
+    # for marker definitions
+    - pyproject.toml
   commands:
     # run_test.py will check that the correct openssl version is linked
     - pytest
