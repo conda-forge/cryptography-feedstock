@@ -34,7 +34,7 @@ requirements:
     - {{ compiler('rust') }}
   host:
     - python
-    - setuptools <62.4
+    - setuptools >=40.6.0
     - pip
     - setuptools-rust >=0.11.4
     - openssl
