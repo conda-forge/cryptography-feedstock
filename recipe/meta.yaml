@@ -28,6 +28,8 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi >=1.12                            # [python_impl != "pypy" and build_platform != target_platform]
+    # necessary for CARGO_NET_GIT_FETCH_WITH_CLI
+    - git                                    # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
     # debug
