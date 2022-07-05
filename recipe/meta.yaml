@@ -21,7 +21,7 @@ build:
     # more debug
     - export CARGO_LOG=trace
     {% endif %}
-    - {{ PYTHON }} -m pip install . -vv --no-build-isolation
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
