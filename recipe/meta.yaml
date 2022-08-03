@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [py<36]
+  skip: true  # [not win]
   script:
     {% if build_platform != target_platform %}
     - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
