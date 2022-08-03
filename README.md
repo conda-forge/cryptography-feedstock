@@ -39,465 +39,227 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_openssl1.1.1python3.10.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.10.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.10.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.10.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl1.1.1python3.7.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.10.2___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.7.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.10.2___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl1.1.1python3.8.____73_pypypython_implpypy</td>
+              <td>win_64_openssl1.1.1python3.10.5___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.8.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.10.5___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl1.1.1python3.8.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.7.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.8.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.7.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl1.1.1python3.9.____73_pypypython_implpypy</td>
+              <td>win_64_openssl1.1.1python3.7.12___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.9.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.7.12___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl1.1.1python3.9.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.7.6___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.9.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.7.6___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3python3.10.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.8.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.10.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3python3.7.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.8.10___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.7.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.10___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3python3.8.____73_pypypython_implpypy</td>
+              <td>win_64_openssl1.1.1python3.8.13___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.8.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.13___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3python3.8.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.8.3___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.8.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.3___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3python3.9.____73_pypypython_implpypy</td>
+              <td>win_64_openssl1.1.1python3.8.5___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.9.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.5___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_openssl3python3.9.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.9.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.9.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1python3.10.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.9.10___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl1.1.1python3.10.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.10___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1python3.7.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.9.13___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl1.1.1python3.7.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.13___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1python3.8.____73_pypypython_implpypy</td>
+              <td>win_64_openssl1.1.1python3.9.4___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl1.1.1python3.8.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.4___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1python3.8.____cpythonpython_implcpython</td>
+              <td>win_64_openssl1.1.1python3.9.6___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl1.1.1python3.8.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.6___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1python3.9.____73_pypypython_implpypy</td>
+              <td>win_64_openssl3python3.10.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl1.1.1python3.9.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.10.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl1.1.1python3.9.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.10.2___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl1.1.1python3.9.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.10.2___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3python3.10.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.10.5___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl3python3.10.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.10.5___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3python3.7.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.7.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl3python3.7.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.7.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3python3.8.____73_pypypython_implpypy</td>
+              <td>win_64_openssl3python3.7.12___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl3python3.8.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.7.12___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3python3.8.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.7.6___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl3python3.8.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.7.6___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3python3.9.____73_pypypython_implpypy</td>
+              <td>win_64_openssl3python3.8.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl3python3.9.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_openssl3python3.9.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.8.10___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_openssl3python3.9.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.10___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1python3.10.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.8.13___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl1.1.1python3.10.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.13___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1python3.7.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.8.3___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl1.1.1python3.7.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.3___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1python3.8.____73_pypypython_implpypy</td>
+              <td>win_64_openssl3python3.8.5___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl1.1.1python3.8.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.5___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1python3.8.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.9.0___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl1.1.1python3.8.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.0___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1python3.9.____73_pypypython_implpypy</td>
+              <td>win_64_openssl3python3.9.10___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl1.1.1python3.9.____73_pypypython_implpypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.10___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl1.1.1python3.9.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.9.13___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl1.1.1python3.9.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.13___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl3python3.10.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.9.4___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl3python3.10.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.4___cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_openssl3python3.7.____cpythonpython_implcpython</td>
+              <td>win_64_openssl3python3.9.6___cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl3python3.7.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_openssl3python3.8.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl3python3.8.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_openssl3python3.8.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl3python3.8.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_openssl3python3.9.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl3python3.9.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_openssl3python3.9.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_openssl3python3.9.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl1.1.1python3.10.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.10.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl1.1.1python3.7.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.7.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl1.1.1python3.8.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.8.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl1.1.1python3.8.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.8.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl1.1.1python3.9.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.9.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl1.1.1python3.9.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.9.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl3python3.10.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.10.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl3python3.7.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.7.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl3python3.8.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.8.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl3python3.8.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.8.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl3python3.9.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.9.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_openssl3python3.9.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.9.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_openssl1.1.1python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_openssl1.1.1python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_openssl1.1.1python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_openssl1.1.1python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_openssl1.1.1python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_openssl1.1.1python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_openssl3python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_openssl3python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_openssl3python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_openssl3python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_openssl3python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_openssl3python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl1.1.1python3.10.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.10.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl1.1.1python3.7.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.7.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl1.1.1python3.8.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl1.1.1python3.8.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.8.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl1.1.1python3.9.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl1.1.1python3.9.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl1.1.1python3.9.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl3python3.10.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.10.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl3python3.7.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.7.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl3python3.8.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl3python3.8.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.8.____cpythonpython_implcpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl3python3.9.____73_pypypython_implpypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.____73_pypypython_implpypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_openssl3python3.9.____cpythonpython_implcpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.____cpythonpython_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=win&configuration=win_64_openssl3python3.9.6___cpython" alt="variant">
                 </a>
               </td>
             </tr>

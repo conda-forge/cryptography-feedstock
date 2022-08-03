@@ -8,43 +8,102 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_openssl1.1.1python3.10.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl1.1.1python3.10.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.10.0___cpython:
+        CONFIG: win_64_openssl1.1.1python3.10.0___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl1.1.1python3.7.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl1.1.1python3.7.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.10.2___cpython:
+        CONFIG: win_64_openssl1.1.1python3.10.2___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl1.1.1python3.8.____73_pypypython_implpypy:
-        CONFIG: win_64_openssl1.1.1python3.8.____73_pypypython_implpypy
+      win_64_openssl1.1.1python3.10.5___cpython:
+        CONFIG: win_64_openssl1.1.1python3.10.5___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl1.1.1python3.8.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl1.1.1python3.8.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.7.0___cpython:
+        CONFIG: win_64_openssl1.1.1python3.7.0___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl1.1.1python3.9.____73_pypypython_implpypy:
-        CONFIG: win_64_openssl1.1.1python3.9.____73_pypypython_implpypy
+      win_64_openssl1.1.1python3.7.12___cpython:
+        CONFIG: win_64_openssl1.1.1python3.7.12___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl1.1.1python3.9.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl1.1.1python3.9.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.7.6___cpython:
+        CONFIG: win_64_openssl1.1.1python3.7.6___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl3python3.10.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl3python3.10.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.8.0___cpython:
+        CONFIG: win_64_openssl1.1.1python3.8.0___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl3python3.7.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl3python3.7.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.8.10___cpython:
+        CONFIG: win_64_openssl1.1.1python3.8.10___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl3python3.8.____73_pypypython_implpypy:
-        CONFIG: win_64_openssl3python3.8.____73_pypypython_implpypy
+      win_64_openssl1.1.1python3.8.13___cpython:
+        CONFIG: win_64_openssl1.1.1python3.8.13___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl3python3.8.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl3python3.8.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.8.3___cpython:
+        CONFIG: win_64_openssl1.1.1python3.8.3___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl3python3.9.____73_pypypython_implpypy:
-        CONFIG: win_64_openssl3python3.9.____73_pypypython_implpypy
+      win_64_openssl1.1.1python3.8.5___cpython:
+        CONFIG: win_64_openssl1.1.1python3.8.5___cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_openssl3python3.9.____cpythonpython_implcpython:
-        CONFIG: win_64_openssl3python3.9.____cpythonpython_implcpython
+      win_64_openssl1.1.1python3.9.0___cpython:
+        CONFIG: win_64_openssl1.1.1python3.9.0___cpython
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 9
+      win_64_openssl1.1.1python3.9.10___cpython:
+        CONFIG: win_64_openssl1.1.1python3.9.10___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl1.1.1python3.9.13___cpython:
+        CONFIG: win_64_openssl1.1.1python3.9.13___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl1.1.1python3.9.4___cpython:
+        CONFIG: win_64_openssl1.1.1python3.9.4___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl1.1.1python3.9.6___cpython:
+        CONFIG: win_64_openssl1.1.1python3.9.6___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.10.0___cpython:
+        CONFIG: win_64_openssl3python3.10.0___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.10.2___cpython:
+        CONFIG: win_64_openssl3python3.10.2___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.10.5___cpython:
+        CONFIG: win_64_openssl3python3.10.5___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.7.0___cpython:
+        CONFIG: win_64_openssl3python3.7.0___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.7.12___cpython:
+        CONFIG: win_64_openssl3python3.7.12___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.7.6___cpython:
+        CONFIG: win_64_openssl3python3.7.6___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.8.0___cpython:
+        CONFIG: win_64_openssl3python3.8.0___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.8.10___cpython:
+        CONFIG: win_64_openssl3python3.8.10___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.8.13___cpython:
+        CONFIG: win_64_openssl3python3.8.13___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.8.3___cpython:
+        CONFIG: win_64_openssl3python3.8.3___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.8.5___cpython:
+        CONFIG: win_64_openssl3python3.8.5___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.9.0___cpython:
+        CONFIG: win_64_openssl3python3.9.0___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.9.10___cpython:
+        CONFIG: win_64_openssl3python3.9.10___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.9.13___cpython:
+        CONFIG: win_64_openssl3python3.9.13___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.9.4___cpython:
+        CONFIG: win_64_openssl3python3.9.4___cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_openssl3python3.9.6___cpython:
+        CONFIG: win_64_openssl3python3.9.6___cpython
+        UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
