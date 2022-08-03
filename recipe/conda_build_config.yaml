@@ -1,0 +1,66 @@
+python:
+  # part of a zip_keys: python, python_impl, numpy
+  # available: 3.7.{0,1,2,3,5,6,8,9,10,12}
+  - 3.7.0 *_cpython
+  - 3.7.6 *_cpython
+  - 3.7.12 *_cpython
+  # available: 3.8.{0,1,2,3,4,5,6,8,10,12,13}
+  - 3.8.0 *_cpython
+  - 3.8.3 *_cpython
+  - 3.8.5 *_cpython
+  - 3.8.10 *_cpython
+  - 3.8.13 *_cpython
+  # available: 3.9.{0,1,2,4,5,6,7,9,10,12,13}
+  - 3.9.0 *_cpython
+  - 3.9.4 *_cpython
+  - 3.9.6 *_cpython
+  - 3.9.10 *_cpython
+  - 3.9.13 *_cpython
+  # available: 3.10.{0,1,2,4,5}
+  - 3.10.0 *_cpython
+  - 3.10.2 *_cpython
+  - 3.10.5 *_cpython
+python_impl:
+  # part of a zip_keys: python, python_impl, numpy
+  # 3.7.x
+  - cpython
+  - cpython
+  - cpython
+  # 3.8.x
+  - cpython
+  - cpython
+  - cpython
+  - cpython
+  - cpython
+  # 3.9.x
+  - cpython
+  - cpython
+  - cpython
+  - cpython
+  - cpython
+  # 3.10.x
+  - cpython
+  - cpython
+  - cpython
+numpy:
+  # part of a zip_keys: python, python_impl, numpy
+  # 3.7.x
+  - 1.19
+  - 1.19
+  - 1.19
+  # 3.8.x
+  - 1.19
+  - 1.19
+  - 1.19
+  - 1.19
+  - 1.19
+  # 3.9.x
+  - 1.19
+  - 1.19
+  - 1.19
+  - 1.19
+  - 1.19
+  # 3.10.x
+  - 1.21
+  - 1.21
+  - 1.21
