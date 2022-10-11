@@ -1,4 +1,4 @@
-{% set version = "38.0.1" %}
+{% set version = "38.0.2" %}
 
 package:
   name: cryptography
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 4d2e2b3192cd3767bdb68c22dd40c07a1deb209a05daee21df74fbf2df8bfbed
+  sha256: 71159f4294b07625703ffdb34b8d88e84b6b9e5c4ebc079503eebdc63b2aac28
 
 build:
   number: 0
