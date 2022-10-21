@@ -1,0 +1,30 @@
+diff --git a/tests/hazmat/backends/test_openssl_memleak.py b/tests/hazmat/backends/test_openssl_memleak.py
+index 2605566..1c5696c 100644
+--- a/tests/hazmat/backends/test_openssl_memleak.py
++++ b/tests/hazmat/backends/test_openssl_memleak.py
+@@ -27,6 +27,7 @@ def main(argv):
+     from cryptography.hazmat.bindings._openssl import ffi, lib
+ 
+     heap = {}
++    start_heap = set()
+ 
+     BACKTRACE_ENABLED = False
+     if BACKTRACE_ENABLED:
+@@ -70,6 +71,8 @@ def main(argv):
+             del heap[ptr]
+         new_ptr = lib.Cryptography_realloc_wrapper(ptr, size, path, line)
+         heap[new_ptr] = (size, path, line, backtrace())
++        if ptr in start_heap:
++            start_heap.add(new_ptr)
+         return new_ptr
+ 
+     @ffi.callback("void(void *, const char *, int)")
+@@ -87,7 +90,7 @@ def main(argv):
+ 
+     hashlib.sha256()
+ 
+-    start_heap = set(heap)
++    start_heap.update(heap)
+ 
+     try:
+         func(*argv[1:])
