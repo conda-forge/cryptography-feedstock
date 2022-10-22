@@ -14,6 +14,8 @@ build:
   number: 1
   skip: true  # [py<36]
   script:
+    # PyPy has weird sysconfigdata name
+    - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
