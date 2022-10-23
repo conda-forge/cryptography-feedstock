@@ -7,16 +7,15 @@ package:
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
   sha256: 71159f4294b07625703ffdb34b8d88e84b6b9e5c4ebc079503eebdc63b2aac28
+  patches:
+    - memleak-test-fix.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script:
-    {% if build_platform != target_platform %}
-    - export PYO3_CROSS_INCLUDE_DIR=$PREFIX/include
-    - export PYO3_CROSS_LIB_DIR=$SP_DIR/../
-    - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
-    {% endif %}
+    # PyPy has weird sysconfigdata name
+    - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -63,12 +62,14 @@ test:
     - pytz
   source_files:
     - tests
+    # for marker definitions
+    - pyproject.toml
   commands:
     # run_test.py will check that the correct openssl version is linked
     - pytest
 
 about:
-  home: cryptography.io
+  home: https://cryptography.io
   license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
   license_family: BSD
   license_file: LICENSE
@@ -80,7 +81,7 @@ about:
     cryptography includes both high level recipes and low level interfaces
     to common cryptographic algorithms such as symmetric ciphers, message
     digests, and key derivation functions..
-  doc_url: http://cryptography.readthedocs.io/
+  doc_url: https://cryptography.io/en/latest
   doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
   dev_url: https://github.com/pyca/cryptography
 
