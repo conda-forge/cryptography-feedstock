@@ -12,8 +12,8 @@ jobs:
         CONFIG: linux_64_openssl1.1.1python3.10.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_openssl1.1.1python3.7.____cpythonpython_implcpython:
-        CONFIG: linux_64_openssl1.1.1python3.7.____cpythonpython_implcpython
+      linux_64_openssl1.1.1python3.11.____cpythonpython_implcpython:
+        CONFIG: linux_64_openssl1.1.1python3.11.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_openssl1.1.1python3.8.____73_pypypython_implpypy:
@@ -36,8 +36,8 @@ jobs:
         CONFIG: linux_64_openssl3python3.10.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_openssl3python3.7.____cpythonpython_implcpython:
-        CONFIG: linux_64_openssl3python3.7.____cpythonpython_implcpython
+      linux_64_openssl3python3.11.____cpythonpython_implcpython:
+        CONFIG: linux_64_openssl3python3.11.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_openssl3python3.8.____73_pypypython_implpypy:
@@ -60,8 +60,8 @@ jobs:
         CONFIG: linux_aarch64_openssl1.1.1python3.10.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_openssl1.1.1python3.7.____cpythonpython_implcpython:
-        CONFIG: linux_aarch64_openssl1.1.1python3.7.____cpythonpython_implcpython
+      linux_aarch64_openssl1.1.1python3.11.____cpythonpython_implcpython:
+        CONFIG: linux_aarch64_openssl1.1.1python3.11.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_openssl1.1.1python3.8.____73_pypypython_implpypy:
@@ -84,8 +84,8 @@ jobs:
         CONFIG: linux_aarch64_openssl3python3.10.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_openssl3python3.7.____cpythonpython_implcpython:
-        CONFIG: linux_aarch64_openssl3python3.7.____cpythonpython_implcpython
+      linux_aarch64_openssl3python3.11.____cpythonpython_implcpython:
+        CONFIG: linux_aarch64_openssl3python3.11.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_openssl3python3.8.____73_pypypython_implpypy:
@@ -108,8 +108,8 @@ jobs:
         CONFIG: linux_ppc64le_openssl1.1.1python3.10.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_openssl1.1.1python3.7.____cpythonpython_implcpython:
-        CONFIG: linux_ppc64le_openssl1.1.1python3.7.____cpythonpython_implcpython
+      linux_ppc64le_openssl1.1.1python3.11.____cpythonpython_implcpython:
+        CONFIG: linux_ppc64le_openssl1.1.1python3.11.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_openssl1.1.1python3.8.____73_pypypython_implpypy:
@@ -132,8 +132,8 @@ jobs:
         CONFIG: linux_ppc64le_openssl3python3.10.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_openssl3python3.7.____cpythonpython_implcpython:
-        CONFIG: linux_ppc64le_openssl3python3.7.____cpythonpython_implcpython
+      linux_ppc64le_openssl3python3.11.____cpythonpython_implcpython:
+        CONFIG: linux_ppc64le_openssl3python3.11.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_openssl3python3.8.____73_pypypython_implpypy:
@@ -152,7 +152,7 @@ jobs:
         CONFIG: linux_ppc64le_openssl3python3.9.____cpythonpython_implcpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-    maxParallel: 27
+    maxParallel: 26
   timeoutInMinutes: 360
 
   steps:
