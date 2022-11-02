@@ -1,4 +1,4 @@
-{% set version = "38.0.2" %}
+{% set version = "38.0.3" %}
 
 package:
   name: cryptography
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 71159f4294b07625703ffdb34b8d88e84b6b9e5c4ebc079503eebdc63b2aac28
+  sha256: bdad62a4af521f100b7d6f35be9947b009a282de5319c3324508615699e1a518
   patches:
     - memleak-test-fix.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<36]
   script:
     # PyPy has weird sysconfigdata name
