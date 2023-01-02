@@ -14,8 +14,13 @@ build:
 outputs:
   - name: cryptography-vectors
     build:
+      # this is noarch, but building it in a different feedstock from the same
+      # sources just causes every single upgrade PR to fail pointlessly, so we
+      # build it here (only one build will be uploaded due to coinciding hashes)
       noarch: python
       script: python -m pip install ./vectors -vv
+      # need to ensure we don't try this on osx-arm
+      skip: true  # [osx and arm64]
 
     requirements:
       host:
