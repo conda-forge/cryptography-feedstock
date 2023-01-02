@@ -528,6 +528,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-cryptography-green.svg)](https://anaconda.org/conda-forge/cryptography) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cryptography.svg)](https://anaconda.org/conda-forge/cryptography) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cryptography.svg)](https://anaconda.org/conda-forge/cryptography) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cryptography.svg)](https://anaconda.org/conda-forge/cryptography) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cryptography--vectors-green.svg)](https://anaconda.org/conda-forge/cryptography-vectors) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cryptography-vectors.svg)](https://anaconda.org/conda-forge/cryptography-vectors) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cryptography-vectors.svg)](https://anaconda.org/conda-forge/cryptography-vectors) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cryptography-vectors.svg)](https://anaconda.org/conda-forge/cryptography-vectors) |
 
 Installing cryptography
 =======================
@@ -539,16 +540,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cryptography` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `cryptography, cryptography-vectors` can be installed with `conda`:
 
 ```
-conda install cryptography
+conda install cryptography cryptography-vectors
 ```
 
 or with `mamba`:
 
 ```
-mamba install cryptography
+mamba install cryptography cryptography-vectors
 ```
 
 It is possible to list all of the versions of `cryptography` available on your platform with `conda`:
