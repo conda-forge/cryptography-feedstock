@@ -1,7 +1,7 @@
 {% set version = "39.0.0" %}
 
 package:
-  name: cryptography
+  name: cryptography-split
   version: {{ version }}
 
 source:
@@ -12,61 +12,67 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<36]
-  script:
-    # PyPy has weird sysconfigdata name
-    - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
-    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cffi >=1.12                            # [python_impl != "pypy" and build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
-  host:
-    - python
-    - setuptools >=40.6.0,<=62
-    - pip
-    - setuptools-rust >=0.11.4
-    - openssl
-    - cffi >=1.12   # [python_impl != "pypy"]
-  run:
-    - python
-    - cffi >=1.12   # [python_impl != "pypy"]
 
-test:
-  imports:
-    - cryptography
-    - cryptography.fernet
-    - cryptography.hazmat
-    - cryptography.hazmat.backends
-    - cryptography.hazmat.backends.openssl
-    - cryptography.hazmat.bindings
-    - cryptography.hazmat.bindings.openssl
-    - cryptography.hazmat.primitives
-    - cryptography.hazmat.primitives.asymmetric
-    - cryptography.hazmat.primitives.ciphers
-    - cryptography.hazmat.primitives.kdf
-    - cryptography.hazmat.primitives.twofactor
-    - cryptography.x509
-  requires:
-    - cryptography-vectors {{ version }}
-    - hypothesis
-    - iso8601
-    - pretend
-    - pytest
-    - pytest-subtests
-    - pytest-benchmark
-    - pytz
-  source_files:
-    - tests
-    # for marker definitions
-    - pyproject.toml
-  commands:
-    # run_test.py will check that the correct openssl version is linked
-    - pytest
+outputs:
+  - name: cryptography
+    build:
+      script:
+        # PyPy has weird sysconfigdata name
+        - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
+        - {{ PYTHON }} -m pip install . -vv
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - cffi >=1.12                            # [build_platform != target_platform and python_impl != "pypy"]
+        - {{ compiler('c') }}
+        - {{ compiler('rust') }}
+      host:
+        - python
+        - setuptools >=40.6.0,<=62
+        - pip
+        - setuptools-rust >=0.11.4
+        - openssl
+        - cffi >=1.12   # [python_impl != "pypy"]
+      run:
+        - python
+        - cffi >=1.12   # [python_impl != "pypy"]
+    test:
+      imports:
+        - cryptography
+        - cryptography.fernet
+        - cryptography.hazmat
+        - cryptography.hazmat.backends
+        - cryptography.hazmat.backends.openssl
+        - cryptography.hazmat.bindings
+        - cryptography.hazmat.bindings.openssl
+        - cryptography.hazmat.primitives
+        - cryptography.hazmat.primitives.asymmetric
+        - cryptography.hazmat.primitives.ciphers
+        - cryptography.hazmat.primitives.kdf
+        - cryptography.hazmat.primitives.twofactor
+        - cryptography.x509
+      requires:
+        - cryptography-vectors {{ version }}
+        - hypothesis
+        - iso8601
+        - pretend
+        - pytest
+        - pytest-subtests
+        - pytest-benchmark
+        - pytz
+      source_files:
+        - tests
+        # for marker definitions
+        - pyproject.toml
+      commands:
+        # run_test.py will check that the correct openssl version is linked
+        - pytest
 
 about:
   home: https://cryptography.io
@@ -82,7 +88,7 @@ about:
     to common cryptographic algorithms such as symmetric ciphers, message
     digests, and key derivation functions..
   doc_url: https://cryptography.io/en/latest
-  doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
+  doc_source_url: https://github.com/pyca/cryptography/blob/main/docs/index.rst
   dev_url: https://github.com/pyca/cryptography
 
 extra:
@@ -90,3 +96,4 @@ extra:
     - jakirkham
     - ocefpaf
     - h-vetinari
+  feedstock-name: cryptography
