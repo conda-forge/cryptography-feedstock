@@ -15,7 +15,7 @@ outputs:
   - name: cryptography-vectors
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install ./vectors -vv
+      script: python -m pip install ./vectors -vv
 
     requirements:
       host:
@@ -48,7 +48,7 @@ outputs:
       script:
         # PyPy has weird sysconfigdata name
         - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
-        - {{ PYTHON }} -m pip install . -vv
+        - python -m pip install . -vv
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
