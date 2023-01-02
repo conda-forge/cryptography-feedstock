@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
   sha256: 7b62ed8e5e6e7ddcc9d92196b2acd8150c8098de3a058ef0abc9c720c971b0e4
-  patches:
-    - memleak-test-fix.patch
 
 build:
   number: 0
