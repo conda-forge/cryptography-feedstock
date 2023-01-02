@@ -11,12 +11,38 @@ source:
 build:
   number: 0
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('rust') }}
-
 outputs:
+  - name: cryptography-vectors
+    build:
+      noarch: python
+      script: {{ PYTHON }} -m pip install ./vectors -vv
+
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+
+    test:
+      imports:
+        - cryptography_vectors
+      requires:
+        - pip
+      commands:
+        - pip check
+
+    about:
+      home: https://github.com/pyca/cryptography
+      license: BSD-3-Clause OR Apache-2.0
+      license_file:
+        - LICENSE
+        - LICENSE.BSD
+        - LICENSE.APACHE
+      summary: Test vectors for the cryptography package.
+      dev_url: https://github.com/pyca/cryptography/tree/main/vectors
+      doc_url: https://cryptography.io
+
   - name: cryptography
     build:
       script:
