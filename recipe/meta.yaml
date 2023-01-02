@@ -1,4 +1,4 @@
-{% set version = "38.0.4" %}
+{% set version = "39.0.0" %}
 
 package:
   name: cryptography
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a0db13e363bff69ddbc3a833b53c75c313846c0dc7271543984e6c991020638f
+  sha256: 7b62ed8e5e6e7ddcc9d92196b2acd8150c8098de3a058ef0abc9c720c971b0e4
   patches:
     - memleak-test-fix.patch
 
