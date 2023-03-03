@@ -1,11 +1,14 @@
+About cryptography-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cryptography-feedstock/blob/main/LICENSE.txt)
+
 About cryptography
-==================
+------------------
 
 Home: https://cryptography.io
 
 Package license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cryptography-feedstock/blob/main/LICENSE.txt)
 
 Summary: cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
 
@@ -20,6 +23,18 @@ cryptography includes both high level recipes and low level interfaces
 to common cryptographic algorithms such as symmetric ciphers, message
 digests, and key derivation functions..
 
+About cryptography-vectors
+--------------------------
+
+Home: https://github.com/pyca/cryptography
+
+Package license: BSD-3-Clause OR Apache-2.0
+
+Summary: Test vectors for the cryptography package.
+
+Development: https://github.com/pyca/cryptography/tree/main/vectors
+
+Documentation: https://cryptography.io
 
 Current build status
 ====================
