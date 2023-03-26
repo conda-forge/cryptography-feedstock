@@ -1,4 +1,4 @@
-{% set version = "39.0.2" %}
+{% set version = "40.0.0" %}
 
 package:
   name: cryptography-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 81177751917382a8fd4779ff63080fcfdb21b3d83b2c26d0ab82a41ab9c0b115
+  sha256: 4f156cc181affe826784552dfdd92291aab5336e2f631131749c39752768116e
 
 build:
   number: 0
@@ -53,6 +53,10 @@ outputs:
       script:
         # PyPy has weird sysconfigdata name
         - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
+        # see below for what OPENSSL_DIR should be pointing to:
+        # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
+        - export OPENSSL_DIR=$PREFIX        # [unix]
+        - set OPENSSL_DIR=%LIBRARY_PREFIX%  # [win]
         - python -m pip install . -vv
     requirements:
       build:
@@ -63,7 +67,7 @@ outputs:
         - {{ compiler('rust') }}
       host:
         - python
-        - setuptools >=40.6.0,<=62
+        - setuptools
         - pip
         - setuptools-rust >=0.11.4
         - openssl
