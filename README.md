@@ -3,6 +3,7 @@ About cryptography-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cryptography-feedstock/blob/main/LICENSE.txt)
 
+
 About cryptography
 ------------------
 
@@ -22,6 +23,7 @@ primitives to Python developers. Our goal is for it to be your
 cryptography includes both high level recipes and low level interfaces
 to common cryptographic algorithms such as symmetric ciphers, message
 digests, and key derivation functions..
+
 
 About cryptography-vectors
 --------------------------
