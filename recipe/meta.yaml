@@ -9,7 +9,7 @@ source:
   sha256: 5d87988988dbf77d59dd693a7969c43127678750f9099bb8cac846112c585060
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: cryptography-vectors

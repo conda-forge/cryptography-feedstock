@@ -1,0 +1,5 @@
+# build against 3.1 for now, because postgres cannot use 3.2;
+# openssl's run-export is major-version only, meaning builds
+# against 3.1 can be used with 3.2.
+openssl:
+  - 3.1
