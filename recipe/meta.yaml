@@ -9,7 +9,7 @@ source:
   sha256: 5d87988988dbf77d59dd693a7969c43127678750f9099bb8cac846112c585060
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: cryptography-vectors
@@ -105,7 +105,8 @@ outputs:
         - pyproject.toml
       commands:
         # run_test.py will check that the correct openssl version is linked
-        - pytest
+        # skip a test due to https://github.com/pyca/cryptography/issues/9950
+        - pytest tests -k "not (TestRSADecryption and test_decrypt_invalid_decrypt)"
 
 about:
   home: https://cryptography.io
