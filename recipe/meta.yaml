@@ -91,6 +91,7 @@ outputs:
         - cryptography.hazmat.primitives.twofactor
         - cryptography.x509
       requires:
+        - certifi
         - cryptography-vectors {{ version }}
         - hypothesis
         - iso8601
