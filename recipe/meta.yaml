@@ -1,4 +1,4 @@
-{% set version = "41.0.7" %}
+{% set version = "42.0.0" %}
 
 package:
   name: cryptography-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 5d87988988dbf77d59dd693a7969c43127678750f9099bb8cac846112c585060
+  sha256: add09051d76ad65c99d0002c3efe987378cb8168ea1b3cb1caf3abba55918df8
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: cryptography-vectors
@@ -71,10 +71,12 @@ outputs:
         - pip
         - setuptools-rust >=0.11.4
         - openssl
-        - cffi >=1.12   # [python_impl != "pypy"]
+        - cffi >=1.12       # [python_impl != "pypy"]
       run:
         - python
-        - cffi >=1.12   # [python_impl != "pypy"]
+        - cffi >=1.12       # [python_impl != "pypy"]
+        # for details see conda_build_config.yaml
+        - __osx >=10.12     # [osx and x86_64]
     test:
       imports:
         - cryptography
@@ -91,6 +93,7 @@ outputs:
         - cryptography.hazmat.primitives.twofactor
         - cryptography.x509
       requires:
+        - certifi
         - cryptography-vectors {{ version }}
         - hypothesis
         - iso8601

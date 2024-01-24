@@ -1,3 +1,8 @@
+# current rust & its stdlib requires 10.12, see
+# https://github.com/rust-lang/rust/pull/104385
+# https://github.com/pyca/cryptography/issues/10235
+MACOSX_DEPLOYMENT_TARGET:   # [osx and x86_64]
+  - "10.12"                 # [osx and x86_64]
 # build against 3.1 for now, because postgres cannot use 3.2;
 # openssl's run-export is major-version only, meaning builds
 # against 3.1 can be used with 3.2.
