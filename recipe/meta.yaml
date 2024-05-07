@@ -1,4 +1,4 @@
-{% set version = "42.0.6" %}
+{% set version = "42.0.7" %}
 
 package:
   name: cryptography-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: b552e272c60f2e8ff319c6303c045be7947fdf965d3183653b303c4a5cd59081
+  sha256: 98fbaf469be4d91e1776384a0e8ba7b3b88f67685d7bfc01bc414676e18af68f
 
 build:
   number: 0
@@ -76,7 +76,6 @@ outputs:
       run:
         - python
         - cffi >=1.12       # [python_impl != "pypy"]
-        # for details see conda_build_config.yaml
     test:
       imports:
         - cryptography
