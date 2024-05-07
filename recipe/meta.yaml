@@ -76,7 +76,6 @@ outputs:
       run:
         - python
         - cffi >=1.12       # [python_impl != "pypy"]
-        # for details see conda_build_config.yaml
     test:
       imports:
         - cryptography
