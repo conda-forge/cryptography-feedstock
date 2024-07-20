@@ -108,8 +108,7 @@ outputs:
         - pyproject.toml
       commands:
         # run_test.py will check that the correct openssl version is linked
-        # skip a test due to https://github.com/pyca/cryptography/issues/9950
-        - pytest tests -k "not (TestRSADecryption and test_decrypt_invalid_decrypt)"
+        - pytest tests
 
 about:
   home: https://cryptography.io
