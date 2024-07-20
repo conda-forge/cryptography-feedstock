@@ -68,11 +68,12 @@ outputs:
         - {{ compiler('rust') }}
       host:
         - python
-        - setuptools
         - pip
-        - setuptools-rust >=0.11.4
+        - maturin >=1,<2
         - openssl
         - cffi >=1.12       # [python_impl != "pypy"]
+        # used by cffi
+        - setuptools        # [python_impl != "pypy"]
       run:
         - python
         - cffi >=1.12       # [python_impl != "pypy"]
