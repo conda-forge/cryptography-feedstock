@@ -57,7 +57,7 @@ outputs:
         # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
         - export OPENSSL_DIR=$PREFIX        # [unix]
         - set OPENSSL_DIR=%LIBRARY_PREFIX%  # [win]
-        - python -m pip install . -vv
+        - python -m pip install . -vv --no-build-isolation
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
