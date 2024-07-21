@@ -1,4 +1,4 @@
-{% set version = "42.0.8" %}
+{% set version = "43.0.0" %}
 
 package:
   name: cryptography-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 38ee4ce0804e4003e3093db8342cd7e6ee65614c8bbf70c98f1716e0f33709ed
+  sha256: e24209db3db62446ce517bb2bfac2709b3d952c5e4601aa653337de9cc666dc7
 
 build:
   number: 0
@@ -18,13 +18,14 @@ outputs:
       # sources just causes every single upgrade PR to fail pointlessly, so we
       # build it here (only one build will be uploaded due to coinciding hashes)
       noarch: python
-      script: python -m pip install ./vectors -vv
+      script: python -m pip install ./vectors -vv --no-build-isolation
       # need to ensure we don't try this on osx-arm
       skip: true  # [osx and arm64]
 
     requirements:
       host:
         - python >=3.6
+        - flit-core >=3.2,<4
         - pip
       run:
         - python >=3.6
@@ -57,22 +58,24 @@ outputs:
         # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
         - export OPENSSL_DIR=$PREFIX        # [unix]
         - set OPENSSL_DIR=%LIBRARY_PREFIX%  # [win]
-        - python -m pip install . -vv
+        - python -m pip install . -vv --no-build-isolation
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - cffi >=1.12                            # [build_platform != target_platform and python_impl != "pypy"]
+        - maturin >=1,<2                         # [build_platform != target_platform]
         - {{ compiler('c') }}
         - {{ stdlib("c") }}
         - {{ compiler('rust') }}
       host:
         - python
-        - setuptools
         - pip
-        - setuptools-rust >=0.11.4
+        - maturin >=1,<2
         - openssl
         - cffi >=1.12       # [python_impl != "pypy"]
+        # used by cffi
+        - setuptools        # [python_impl != "pypy"]
       run:
         - python
         - cffi >=1.12       # [python_impl != "pypy"]
@@ -107,8 +110,7 @@ outputs:
         - pyproject.toml
       commands:
         # run_test.py will check that the correct openssl version is linked
-        # skip a test due to https://github.com/pyca/cryptography/issues/9950
-        - pytest tests -k "not (TestRSADecryption and test_decrypt_invalid_decrypt)"
+        - pytest tests
 
 about:
   home: https://cryptography.io
