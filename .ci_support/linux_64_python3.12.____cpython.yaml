@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '12'
+- '13'
 cdt_name:
 - cos7
 channel_sources:
@@ -23,7 +23,8 @@ python_impl:
 rust_compiler:
 - rust
 target_platform:
-- linux-ppc64le
+- linux-64
 zip_keys:
 - - python
   - python_impl
+  - channel_sources
