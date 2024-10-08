@@ -64,6 +64,7 @@ outputs:
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - cffi >=1.12                            # [build_platform != target_platform and python_impl != "pypy"]
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('rust') }}
       host:
         - python
