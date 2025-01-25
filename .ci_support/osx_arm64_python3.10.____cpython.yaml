@@ -26,6 +26,8 @@ python:
 - 3.10.* *_cpython
 python_impl:
 - cpython
+python_min:
+- '3.9'
 rust_compiler:
 - rust
 target_platform:

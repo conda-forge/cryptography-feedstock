@@ -9,7 +9,7 @@ source:
   sha256: b2232d62504ba4cca97136582e86564ac75ec1124dfddb19d83f0eb26548d18d
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: cryptography-vectors
@@ -24,17 +24,18 @@ outputs:
 
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - flit-core >=3.2,<4
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
 
     test:
       imports:
         - cryptography_vectors
       requires:
         - pip
+        - python {{ python_min }}
       commands:
         - pip check
 
