@@ -1,4 +1,4 @@
-{% set version = "45.0.1" %}
+{% set version = "45.0.2" %}
 
 package:
   name: cryptography-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 3f1da798f723f65c6b6e4d09374863f047c5bc7e46e4a5b2a15ba3adae03af27
+  sha256: 061700c5de59729f21064db16edbf4e31bd5c8a024e71cbd5f22ebdb02d95cbb
 
 build:
   number: 0
