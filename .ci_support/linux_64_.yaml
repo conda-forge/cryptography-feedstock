@@ -28,16 +28,9 @@ python:
 - 3.9.* *_cpython
 python_impl:
 - cpython
-- cpython
-- cpython
-- cpython
-- cpython
 python_min:
 - '3.9'
 rust_compiler:
 - rust
 target_platform:
 - linux-64
-zip_keys:
-- - python
-  - python_impl
