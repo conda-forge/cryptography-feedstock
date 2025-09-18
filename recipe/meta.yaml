@@ -64,8 +64,8 @@ outputs:
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - cffi >=1.12                            # [build_platform != target_platform]
         - maturin >=1,<2                         # [build_platform != target_platform]
+        - {{ stdlib('c') }}
         - {{ compiler('c') }}
-        - {{ stdlib("c") }}
         - {{ compiler('rust') }}
       host:
         - python
