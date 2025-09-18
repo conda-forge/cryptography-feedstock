@@ -57,8 +57,6 @@ outputs:
         # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
         - export OPENSSL_DIR=$PREFIX        # [unix]
         - set OPENSSL_DIR=%LIBRARY_PREFIX%  # [win]
-        # https://github.com/conda-forge/maturin-feedstock/issues/152
-        - rm $PREFIX/lib/python3.14/build-details.json  # [unix and build_platform != target_platform and py==314]
         - python -m pip install . -vv --no-build-isolation
     requirements:
       build:
