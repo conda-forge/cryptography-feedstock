@@ -53,8 +53,6 @@ outputs:
   - name: cryptography
     build:
       script:
-        # PyPy has weird sysconfigdata name
-        - rm $PREFIX/lib/pypy$PY_VER/_sysconfigdata.py  # [python_impl == "pypy" and build_platform != target_platform and target_platform == "linux-ppc64le"]
         # see below for what OPENSSL_DIR should be pointing to:
         # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
         - export OPENSSL_DIR=$PREFIX        # [unix]
@@ -66,7 +64,7 @@ outputs:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - cffi >=1.12                            # [build_platform != target_platform and python_impl != "pypy"]
+        - cffi >=1.12                            # [build_platform != target_platform]
         - maturin >=1,<2                         # [build_platform != target_platform]
         - {{ compiler('c') }}
         - {{ stdlib("c") }}
@@ -76,12 +74,12 @@ outputs:
         - pip
         - maturin >=1,<2
         - openssl
-        - cffi >=1.12       # [python_impl != "pypy"]
+        - cffi >=1.12
         # used by cffi
-        - setuptools        # [python_impl != "pypy"]
+        - setuptools
       run:
         - python
-        - cffi >=1.12       # [python_impl != "pypy"]
+        - cffi >=1.12
     test:
       imports:
         - cryptography
