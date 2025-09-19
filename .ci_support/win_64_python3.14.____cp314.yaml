@@ -6,6 +6,8 @@ channel_sources:
 - conda-forge,conda-forge/label/python_rc
 channel_targets:
 - conda-forge main
+is_freethreading:
+- false
 openssl:
 - '3'
 pin_run_as_build:
