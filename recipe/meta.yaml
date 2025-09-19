@@ -9,7 +9,7 @@ source:
   sha256: fa18b8f91f1c20c162142ed5cb1b90d829bc0159e8c802e78f2583ae5e7ae284
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: cryptography-vectors
@@ -62,7 +62,7 @@ outputs:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - cffi >=1.12                            # [build_platform != target_platform]
+        - cffi >=2.0.0                           # [build_platform != target_platform]
         - maturin >=1,<2                         # [build_platform != target_platform]
         - {{ stdlib('c') }}
         - {{ compiler('c') }}
@@ -72,12 +72,12 @@ outputs:
         - pip
         - maturin >=1,<2
         - openssl
-        - cffi >=1.12
+        - cffi >=2.0.0
         # used by cffi
         - setuptools
       run:
         - python
-        - cffi >=1.12
+        - cffi >=2.0.0
     test:
       imports:
         - cryptography
@@ -94,6 +94,7 @@ outputs:
         - cryptography.hazmat.primitives.twofactor
         - cryptography.x509
       requires:
+        - pip
         - certifi
         - cryptography-vectors {{ version }}
         - hypothesis
@@ -108,6 +109,7 @@ outputs:
         # for marker definitions
         - pyproject.toml
       commands:
+        - pip check
         # run_test.py will check that the correct openssl version is linked
         - pytest tests
 
