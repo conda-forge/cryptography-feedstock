@@ -11,7 +11,7 @@ source:
     - patches/0001-stay-on-old-cffi-for-non-freethreading-builds.patch  # [not is_freethreading]
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: cryptography-vectors
@@ -80,6 +80,7 @@ outputs:
       run:
         - python
         - cffi >=1.14
+        - typing_extensions >=4.13.2  # [py<311]
     test:
       imports:
         - cryptography
