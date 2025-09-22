@@ -80,7 +80,7 @@ outputs:
       run:
         - python
         - cffi >=1.14
-        - typing_extensions >=4.13.2  # [py<3.11]
+        - typing_extensions >=4.13.2  # [py<311]
     test:
       imports:
         - cryptography
