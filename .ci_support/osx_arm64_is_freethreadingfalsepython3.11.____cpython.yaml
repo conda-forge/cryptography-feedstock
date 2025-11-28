@@ -19,16 +19,19 @@ is_freethreading:
 macos_machine:
 - arm64-apple-darwin20.0.0
 openssl:
-- '3'
+- '3.5'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.11.* *_cpython
 python_min:
 - '3.10'
 rust_compiler:
 - rust
 target_platform:
 - osx-arm64
+zip_keys:
+- - python
+  - is_freethreading
