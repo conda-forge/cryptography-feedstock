@@ -15,16 +15,19 @@ docker_image:
 is_freethreading:
 - false
 openssl:
-- '3'
+- '3.5'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
+- 3.12.* *_cpython
 python_min:
 - '3.10'
 rust_compiler:
 - rust
 target_platform:
 - linux-ppc64le
+zip_keys:
+- - python
+  - is_freethreading

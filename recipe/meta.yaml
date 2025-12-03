@@ -11,7 +11,7 @@ source:
     - patches/0001-stay-on-old-cffi-for-non-freethreading-builds.patch  # [not is_freethreading]
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: cryptography-vectors
@@ -71,6 +71,8 @@ outputs:
         - {{ compiler('rust') }}
       host:
         - python
+        # force stubborn solver to play ball
+        - python >=3.14.1   # [win and is_freethreading]
         - pip
         - maturin >=1,<2
         - openssl
