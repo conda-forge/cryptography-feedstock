@@ -12,6 +12,8 @@ source:
 
 build:
   number: 0
+  # relocation errors
+  skip: true  # [ppc64le]
 
 outputs:
   - name: cryptography-vectors
