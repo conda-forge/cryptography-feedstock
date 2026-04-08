@@ -1,4 +1,4 @@
-{% set version = "46.0.6" %}
+{% set version = "46.0.7" %}
 
 package:
   name: cryptography-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 234935d92ba2320836036c281163ea64837455dd7e0aaa0f034e574ccc7b4c64
+  sha256: 16906783d5731a2b14aaf34480e97d0df2909ef244ca6eb9feda98603bb43d16
   patches:
     - patches/0001-stay-on-old-cffi-for-non-freethreading-builds.patch  # [not is_freethreading]
 
