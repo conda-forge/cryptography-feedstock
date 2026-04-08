@@ -14,6 +14,8 @@ build:
   number: 0
   # relocation errors
   skip: true  # [ppc64le]
+  # todo: segfaults for unknown reason
+  skip: true  # [linux and aarch64 and is_freethreading]
 
 outputs:
   - name: cryptography-vectors
