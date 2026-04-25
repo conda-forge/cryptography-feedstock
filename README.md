@@ -105,13 +105,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_is_freethreadingtruepython3.14.____cp314t</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cryptography-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_is_freethreadingtruepython3.14.____cp314t" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64_is_freethreadingfalsepython3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=195&branchName=main">
