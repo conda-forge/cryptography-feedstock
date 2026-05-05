@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/{{ version }}.tar.gz
   sha256: 6afca628a004be66b3793481e02eb22ad4a067a052a6785c3736cc135dc7dc24
-  patches:
-    - patches/0001-stay-on-old-cffi-for-non-freethreading-builds.patch  # [not is_freethreading]
 
 build:
   number: 0
