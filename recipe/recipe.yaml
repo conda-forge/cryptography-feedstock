@@ -19,7 +19,8 @@ build:
     # relocation errors
     - ppc64le
     # todo: segfaults for unknown reason
-    - (linux and aarch64 and is_freethreading)
+    - linux and aarch64 and is_freethreading
+    - is_abi3 and not is_python_min
 
 outputs:
   - package:
@@ -54,12 +55,14 @@ outputs:
         - LICENSE.BSD
         - LICENSE.APACHE
       summary: Test vectors for the cryptography package.
-      homepage: https://pypi.org/package/cryptography-vectors
+      homepage: https://pypi.org/project/cryptography-vectors
       repository: https://github.com/pyca/cryptography/tree/main/vectors
 
   - package:
       name: cryptography
     build:
+      python:
+        version_independent: ${{ is_abi3 }}
       script:
         env:
           # see below for what OPENSSL_DIR should be pointing to:
@@ -102,6 +105,10 @@ outputs:
           then:
             # force stubborn solver to play ball
             - python >=3.14.1
+        - if: is_abi3
+          then:
+            - python-abi3
+            - python ${{ python_min }}.*
       run:
         - python
         - cffi >=2.0
@@ -122,6 +129,20 @@ outputs:
             - cryptography.hazmat.primitives.twofactor
             - cryptography.x509
           pip_check: true
+          python_version:
+            - "*"
+            - if: is_abi3
+              then:
+                - ${{ python_min }}.*
+      - if: is_abi3
+        then:
+          - requirements:
+              run:
+                - abi3audit
+                - python ${{ python_min }}.*
+            script:
+              - cd "${{ "$SP_DIR" if unix else "%SP_DIR%" }}/cryptography/hazmat/bindings"
+              - abi3audit -s -v --assume-minimum-abi3 ${{ python_min }} _rust.${{ "abi3.so" if unix else "pyd" }}
       - files:
           recipe:
             # run_test.py will check that the correct openssl version is linked
