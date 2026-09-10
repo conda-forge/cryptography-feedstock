@@ -65,7 +65,16 @@ outputs:
           # see below for what OPENSSL_DIR should be pointing to:
           # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
           OPENSSL_DIR: ${{ "$PREFIX" if unix else "%LIBRARY_PREFIX%" }}
+          CARGO_PROFILE_RELEASE_STRIP: symbols
+          CARGO_PROFILE_RELEASE_LTO: fat
+          CARGO: cargo-auditable-wrapper.${{ "bat" if win else "sh" }}
         content:
+          - if: win
+            then:
+              - copy "%RECIPE_DIR%\cargo-auditable-wrapper.bat" "%BUILD_PREFIX%\Library\bin\"
+            else:
+              - cp "${RECIPE_DIR}/cargo-auditable-wrapper.sh" "${BUILD_PREFIX}/bin/"
+              - chmod 755 "${BUILD_PREFIX}/bin/cargo-auditable-wrapper.sh"
           - python -m pip install . -vv --no-build-isolation
           - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     requirements:
@@ -73,6 +82,7 @@ outputs:
         - ${{ compiler("c") }}
         - ${{ compiler("rust") }}
         - ${{ stdlib("c") }}
+        - cargo-auditable
         - cargo-bundle-licenses
         - if: build_platform != target_platform
           then:
