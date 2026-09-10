@@ -14,8 +14,6 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-is_freethreading:
-- false
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
@@ -32,6 +30,3 @@ rust_compiler:
 - rust
 target_platform:
 - osx-64
-zip_keys:
-- - python
-  - is_freethreading
