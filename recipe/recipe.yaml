@@ -136,11 +136,16 @@ outputs:
                 - ${{ python_min }}.*
       - if: is_abi3
         then:
-          - requirements:
+          - files:
+              recipe:
+                # run_test.py will check that the correct openssl version is linked
+                - run_test.py
+            requirements:
               run:
                 - abi3audit
                 - python ${{ python_min }}.*
             script:
+              - python run_test.py
               - cd "${{ "$SP_DIR" if unix else "%SP_DIR%" }}/cryptography/hazmat/bindings"
               - abi3audit -s -v --assume-minimum-abi3 ${{ python_min }} _rust.${{ "abi3.so" if unix else "pyd" }}
       - files:
