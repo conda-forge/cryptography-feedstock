@@ -1,0 +1,197 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: "50.0.1"
+  build_number: 1
+
+recipe:
+  name: cryptography-split
+  version: ${{ version }}
+
+source:
+  url: https://github.com/pyca/cryptography/archive/refs/tags/${{ version }}.tar.gz
+  sha256: 649f6cfd4c9988e85adc3b480479d7e36f43f8e4861cac0e0c7fc68b45dd7075
+
+build:
+  number: ${{ build_number }}
+  skip:
+    # relocation errors
+    - ppc64le
+    # todo: segfaults for unknown reason
+    - linux and aarch64 and is_freethreading
+    - is_abi3 and not is_python_min
+
+outputs:
+  - package:
+      name: cryptography-vectors
+    build:
+      # this is noarch, but building it in a different feedstock from the same
+      # sources just causes every single upgrade PR to fail pointlessly, so we
+      # build it here (only one build will be uploaded due to coinciding hashes)
+      noarch: python
+      script: python -m pip install ./vectors -vv --no-build-isolation
+      # avoid build hash which includes subdir-specific `python_min`
+      string: noarch_${{ build_number }}
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - uv-build
+        - pip
+      run:
+        - python >=${{ python_min }}
+    tests:
+      - python:
+          imports:
+            - cryptography_vectors
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
+    about:
+      license: BSD-3-Clause OR Apache-2.0
+      license_file:
+        - LICENSE
+        - LICENSE.BSD
+        - LICENSE.APACHE
+      summary: Test vectors for the cryptography package.
+      homepage: https://pypi.org/project/cryptography-vectors
+      repository: https://github.com/pyca/cryptography/tree/main/vectors
+
+  - package:
+      name: cryptography
+    build:
+      python:
+        version_independent: ${{ is_abi3 }}
+      script:
+        env:
+          # see below for what OPENSSL_DIR should be pointing to:
+          # https://github.com/sfackler/rust-openssl/blob/openssl-sys-v0.9.72/openssl/src/lib.rs#L55-L56
+          OPENSSL_DIR: ${{ "$PREFIX" if unix else "%LIBRARY_PREFIX%" }}
+          CARGO_PROFILE_RELEASE_STRIP: symbols
+          CARGO_PROFILE_RELEASE_LTO: fat
+          CARGO: cargo-auditable-wrapper.${{ "bat" if win else "sh" }}
+        content:
+          - if: win
+            then:
+              - copy "%RECIPE_DIR%\cargo-auditable-wrapper.bat" "%BUILD_PREFIX%\Library\bin\"
+            else:
+              - cp "${RECIPE_DIR}/cargo-auditable-wrapper.sh" "${BUILD_PREFIX}/bin/"
+              - chmod 755 "${BUILD_PREFIX}/bin/cargo-auditable-wrapper.sh"
+          - python -m pip install . -vv --no-build-isolation
+          - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    requirements:
+      build:
+        - ${{ compiler("c") }}
+        - ${{ compiler("rust") }}
+        - ${{ stdlib("c") }}
+        - cargo-auditable
+        - cargo-bundle-licenses
+        - if: build_platform != target_platform
+          then:
+            - cffi >=2.0
+            - cross-python_${{ target_platform }}
+            - maturin >=1,<2
+            - python
+      host:
+        - cffi >=2.0
+        - maturin >=1,<2
+        - openssl
+        - pip
+        - python
+        # used by cffi
+        - setuptools
+        - if: win and is_freethreading
+          then:
+            # force stubborn solver to play ball
+            - python >=3.14.1
+        - if: is_abi3
+          then:
+            - python-abi3
+            - python ${{ python_min }}.*
+      run:
+        - python
+        - cffi >=2.0
+    tests:
+      - python:
+          imports:
+            - cryptography
+            - cryptography.fernet
+            - cryptography.hazmat
+            - cryptography.hazmat.backends
+            - cryptography.hazmat.backends.openssl
+            - cryptography.hazmat.bindings
+            - cryptography.hazmat.bindings.openssl
+            - cryptography.hazmat.primitives
+            - cryptography.hazmat.primitives.asymmetric
+            - cryptography.hazmat.primitives.ciphers
+            - cryptography.hazmat.primitives.kdf
+            - cryptography.hazmat.primitives.twofactor
+            - cryptography.x509
+          pip_check: true
+          python_version:
+            - "*"
+            - if: is_abi3
+              then:
+                - ${{ python_min }}.*
+      - if: is_abi3
+        then:
+          - files:
+              recipe:
+                # run_test.py will check that the correct openssl version is linked
+                - run_test.py
+            requirements:
+              run:
+                - abi3audit
+                - python ${{ python_min }}.*
+            script:
+              - python run_test.py
+              - cd "${{ "$SP_DIR" if unix else "%SP_DIR%" }}/cryptography/hazmat/bindings"
+              - abi3audit -s -v --assume-minimum-abi3 ${{ python_min }} _rust.${{ "abi3.so" if unix else "pyd" }}
+      - files:
+          recipe:
+            # run_test.py will check that the correct openssl version is linked
+            - run_test.py
+          source:
+            - tests/
+            # for marker definitions
+            - pyproject.toml
+        requirements:
+          run:
+            - certifi
+            - cryptography-vectors ${{ version }}.*
+            - hypothesis
+            - iso8601
+            - pretend
+            - pytest
+            # needs to avoid newest version due to https://github.com/conda-forge/py-cpuinfo-feedstock/issues/11
+            - pytest-benchmark <5.3
+            - pytest-subtests
+            - pytz
+        script:
+          - python run_test.py
+          - pytest tests
+
+about:
+  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
+  homepage: https://pypi.org/project/cryptography
+  repository: https://github.com/pyca/cryptography
+  documentation: https://cryptography.io
+  description: |
+    cryptography is a package which provides cryptographic recipes and
+    primitives to Python developers. Our goal is for it to be your
+    "cryptographic standard library". It supports Python 3.6+ and PyPy3 7.2+.
+    cryptography includes both high level recipes and low level interfaces
+    to common cryptographic algorithms such as symmetric ciphers, message
+    digests, and key derivation functions.
+
+extra:
+  feedstock-name: cryptography
+  recipe-maintainers:
+    - jakirkham
+    - ocefpaf
+    - h-vetinari
