@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: "50.0.1"
-  build_number: 1
+  version: "50.0.2"
+  build_number: 0
 
 recipe:
   name: cryptography-split
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://github.com/pyca/cryptography/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 649f6cfd4c9988e85adc3b480479d7e36f43f8e4861cac0e0c7fc68b45dd7075
+  sha256: dea608ac97229edf31dcf976e158182a4aa4f76dda40b4a9ffca84bdcb98d173
 
 build:
   number: ${{ build_number }}
