@@ -101,10 +101,6 @@ outputs:
         - python
         # used by cffi
         - setuptools
-        - if: win and is_freethreading
-          then:
-            # force stubborn solver to play ball
-            - python >=3.14.1
         - if: is_abi3
           then:
             - python-abi3
