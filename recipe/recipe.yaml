@@ -164,8 +164,7 @@ outputs:
             - iso8601
             - pretend
             - pytest
-            # needs to avoid newest version due to https://github.com/conda-forge/py-cpuinfo-feedstock/issues/11
-            - pytest-benchmark <5.3
+            - pytest-benchmark
             - pytest-subtests
             - pytz
         script:
