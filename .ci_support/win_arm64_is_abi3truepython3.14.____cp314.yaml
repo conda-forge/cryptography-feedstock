@@ -7,11 +7,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 is_abi3:
-- false
-is_freethreading:
 - true
 is_python_min:
-- false
+- true
 openssl:
 - '3.5'
 pin_run_as_build:
@@ -19,7 +17,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.14.* *_cp314t
+- 3.14.* *_cp314
 python_min:
 - '3.14'
 rust_compiler:
@@ -29,5 +27,4 @@ target_platform:
 zip_keys:
 - - python
   - is_python_min
-  - is_freethreading
   - is_abi3

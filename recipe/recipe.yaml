@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   version: "50.0.2"
-  build_number: 0
+  build_number: 1
 
 recipe:
   name: cryptography-split
@@ -16,11 +16,11 @@ source:
 build:
   number: ${{ build_number }}
   skip:
-    # relocation errors
+    - is_abi3 and not is_python_min
+    # todo: relocation errors
     - ppc64le
     # todo: segfaults for unknown reason
     - linux and aarch64 and is_freethreading
-    - is_abi3 and not is_python_min
 
 outputs:
   - package:
@@ -82,9 +82,9 @@ outputs:
           - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     requirements:
       build:
+        - ${{ stdlib("c") }}
         - ${{ compiler("c") }}
         - ${{ compiler("rust") }}
-        - ${{ stdlib("c") }}
         - cargo-auditable
         - cargo-bundle-licenses
         - if: build_platform != target_platform
@@ -101,10 +101,6 @@ outputs:
         - python
         # used by cffi
         - setuptools
-        - if: win and is_freethreading
-          then:
-            # force stubborn solver to play ball
-            - python >=3.14.1
         - if: is_abi3
           then:
             - python-abi3
@@ -164,8 +160,7 @@ outputs:
             - iso8601
             - pretend
             - pytest
-            # needs to avoid newest version due to https://github.com/conda-forge/py-cpuinfo-feedstock/issues/11
-            - pytest-benchmark <5.3
+            - pytest-benchmark
             - pytest-subtests
             - pytz
         script:
