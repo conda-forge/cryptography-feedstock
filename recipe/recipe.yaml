@@ -19,6 +19,9 @@ build:
     - is_abi3 and not is_python_min
     # todo: relocation errors
     - ppc64le
+  variant:
+    use_keys:
+      - python
 
 outputs:
   - package:
