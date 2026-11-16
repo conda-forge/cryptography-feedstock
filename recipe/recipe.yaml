@@ -19,8 +19,9 @@ build:
     - is_abi3 and not is_python_min
     # todo: relocation errors
     - ppc64le
-    # todo: segfaults for unknown reason
-    - linux and aarch64 and is_freethreading
+  variant:
+    use_keys:
+      - python
 
 outputs:
   - package:
